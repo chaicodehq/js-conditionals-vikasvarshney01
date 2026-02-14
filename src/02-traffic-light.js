@@ -22,5 +22,31 @@
  * @returns {string} The driving action to take
  */
 export function getTrafficAction(color) {
-  // Your code here
+   let massage;
+  switch(color){
+  case "green":
+  case "GREEN":
+  case "Green":
+  massage="GO";
+  break
+  case "yellow":
+  case "YELLOW":
+  case "Yellow":
+  massage="SLOW DOWN";
+  break
+  case "red":
+  case "Red":
+  case "RED":
+  massage="STOP";
+  break
+  case "flashing red":
+  case "FLASHING RED":
+  case "Flashing Red":
+  massage="STOP AND PROCEED WITH CAUTION";
+  break
+  default:
+    massage="INVALID SIGNAL"
+  
+}
+return massage
 }
